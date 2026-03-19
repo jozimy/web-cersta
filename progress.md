@@ -15,11 +15,11 @@
 - [x] Responsive layout with mobile hamburger menu
 - [x] Booking widget (sends email to cersta@cersta.com)
 - [x] Services section (airport, city, hourly, cross-border, events, family friendly)
-- [x] Fleet — generic premium vehicles, no specific model mentioned
+- [x] Fleet — clean descriptive paragraph, no specific model, no feature tags
 - [x] Fixed-price route table (BTS, Vienna, Budapest, Prague)
 - [x] Contact form with email
 - [x] SWA config with routing
-- [x] Golden C favicon + nav logo (Wadamo style — rounded square icon + text)
+- [x] Golden CERSTA badge logo (nav + favicon) — dark text on gold rounded rect
 - [x] Browser title: "Cersta"
 - [x] Phone: +421 905 534 555
 - [x] Email: cersta@cersta.com
