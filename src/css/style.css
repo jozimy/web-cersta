@@ -53,20 +53,16 @@ body {
 }
 
 .nav-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  display: inline-block;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-bg);
+  background: var(--color-gold);
   text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.nav-logo-icon {
-  width: 32px;
-  height: 32px;
+  letter-spacing: 3px;
+  padding: 8px 16px;
+  border-radius: 6px;
 }
 
 .nav-links { display: flex; gap: 32px; list-style: none; }
