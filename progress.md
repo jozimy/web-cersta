@@ -19,7 +19,7 @@
 - [x] Fixed-price route table (BTS, Vienna, Budapest, Prague)
 - [x] Contact form with email
 - [x] SWA config with routing
-- [x] Golden C favicon on dark background
+- [x] Golden C favicon + nav logo (Wadamo style — rounded square icon + text)
 - [x] Browser title: "Cersta"
 - [x] Phone: +421 905 534 555
 - [x] Email: cersta@cersta.com
