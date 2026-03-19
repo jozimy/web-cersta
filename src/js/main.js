@@ -37,9 +37,9 @@ document.getElementById('bookingForm').addEventListener('submit', (e) => {
     return;
   }
 
-  const message = `Hello, I'd like to book a ride:\n\nFrom: ${pickup}\nTo: ${dropoff}\nDate: ${date}\nTime: ${time}`;
-  const encoded = encodeURIComponent(message);
-  window.open(`https://wa.me/421900000000?text=${encoded}`, '_blank');
+  const subject = encodeURIComponent('Ride Booking Request');
+  const body = encodeURIComponent(`Hello, I'd like to book a ride:\n\nFrom: ${pickup}\nTo: ${dropoff}\nDate: ${date}\nTime: ${time}`);
+  window.location.href = `mailto:cersta@cersta.com?subject=${subject}&body=${body}`;
 });
 
 // Contact form
