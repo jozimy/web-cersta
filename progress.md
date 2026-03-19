@@ -23,7 +23,7 @@
 - [x] Browser title: "Cersta"
 - [x] Phone: +421 905 534 555
 - [x] Email: cersta@cersta.com
-- [x] No images (clean minimalist design)
+- [x] Hero background image (BMW front shot with dark overlay)
 - [x] No WhatsApp integration
 
 ## TODO
