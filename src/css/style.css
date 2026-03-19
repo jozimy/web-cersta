@@ -1,0 +1,480 @@
+/* ===== CERSTA - Luxury Transportation ===== */
+
+:root {
+  --color-bg: #0a0a0f;
+  --color-bg-alt: #12121a;
+  --color-surface: #1a1a25;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e0c872;
+  --color-text: #f0ede6;
+  --color-text-muted: #9a978f;
+  --color-border: rgba(201, 168, 76, 0.15);
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --max-width: 1200px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+/* --- NAV --- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  transition: background 0.3s, padding 0.3s;
+}
+
+.nav.scrolled {
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-links { display: flex; gap: 32px; list-style: none; }
+
+.nav-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--color-gold); }
+
+.nav-toggle { display: none; background: none; border: none; color: var(--color-text); font-size: 1.5rem; cursor: pointer; }
+
+/* --- HERO --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, rgba(10,10,15,0.3) 0%, var(--color-bg) 100%),
+              linear-gradient(135deg, #0a0a0f 0%, #1a1520 50%, #0a0a0f 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 24px; }
+
+.hero-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin: 0 auto 40px;
+}
+
+/* --- BOOKING WIDGET --- */
+.booking-widget {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.booking-field { display: flex; flex-direction: column; gap: 6px; }
+
+.booking-field label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+.booking-field input,
+.booking-field select {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: border-color 0.3s;
+}
+
+.booking-field input:focus,
+.booking-field select:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.booking-field select option { background: var(--color-bg-alt); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.btn:hover { background: var(--color-gold-light); transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  width: auto;
+}
+
+.btn-outline:hover { background: rgba(201, 168, 76, 0.1); }
+
+/* --- SECTIONS --- */
+section { padding: 100px 0; }
+
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.section-text {
+  color: var(--color-text-muted);
+  max-width: 600px;
+  font-size: 1.05rem;
+}
+
+.section-header { text-align: center; margin-bottom: 64px; }
+.section-header .section-text { margin: 0 auto; }
+
+/* --- SERVICES --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 40px 32px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.service-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.service-card p { color: var(--color-text-muted); font-size: 0.95rem; }
+
+/* --- FLEET --- */
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.fleet-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.fleet-card:hover { border-color: var(--color-gold); }
+
+.fleet-img {
+  width: 100%;
+  height: 220px;
+  background: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.fleet-info { padding: 28px; }
+
+.fleet-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.fleet-meta {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.fleet-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fleet-features li {
+  background: rgba(201, 168, 76, 0.08);
+  color: var(--color-gold);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* --- ROUTES / PRICING --- */
+.routes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.routes-table th,
+.routes-table td {
+  padding: 18px 24px;
+  text-align: left;
+}
+
+.routes-table th {
+  background: var(--color-bg-alt);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+.routes-table td { border-top: 1px solid var(--color-border); }
+
+.routes-table .price {
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* --- WHY US --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.feature { text-align: center; }
+
+.feature-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.feature h3 { margin-bottom: 8px; font-size: 1.1rem; }
+.feature p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+/* --- CONTACT --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 32px; }
+
+.contact-item h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+}
+
+.contact-item p { color: var(--color-text-muted); }
+.contact-item a { color: var(--color-text); text-decoration: none; }
+.contact-item a:hover { color: var(--color-gold); }
+
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.contact-form textarea { min-height: 120px; resize: vertical; }
+
+/* --- FOOTER --- */
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: 48px 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.footer-links a { color: var(--color-text-muted); text-decoration: none; }
+.footer-links a:hover { color: var(--color-gold); }
+
+/* --- WHATSAPP FLOAT --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  z-index: 90;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 15, 0.98);
+    padding: 24px;
+    gap: 20px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav-toggle { display: block; }
+  .booking-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .fleet-grid { grid-template-columns: 1fr; }
+  .routes-table { font-size: 0.85rem; }
+  .routes-table th, .routes-table td { padding: 12px 14px; }
+}

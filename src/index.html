@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cersta — Luxury Transportation in Bratislava</title>
+  <meta name="description" content="Premium chauffeur and airport transfer service in Bratislava. Fixed-price rides, professional drivers, luxury vehicles. Book your ride today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="#" class="nav-logo">CERSTA</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">Premium Transportation</p>
+      <h1>Your Journey Through Bratislava, Elevated</h1>
+      <p>Luxury chauffeur service with fixed prices, professional drivers, and premium vehicles. Airport transfers, city rides, and cross-border travel.</p>
+
+      <div class="booking-widget">
+        <form id="bookingForm">
+          <div class="booking-grid">
+            <div class="booking-field">
+              <label for="pickup">Pick-up Location</label>
+              <input type="text" id="pickup" placeholder="Address or airport (e.g. BTS)">
+            </div>
+            <div class="booking-field">
+              <label for="dropoff">Drop-off Location</label>
+              <input type="text" id="dropoff" placeholder="Address or airport (e.g. VIE)">
+            </div>
+            <div class="booking-field">
+              <label for="date">Date</label>
+              <input type="date" id="date">
+            </div>
+            <div class="booking-field">
+              <label for="time">Time</label>
+              <input type="time" id="time">
+            </div>
+          </div>
+          <button type="submit" class="btn">Get a Quote</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Our Services</p>
+        <h2 class="section-title">Travel With Confidence</h2>
+        <p class="section-text">From airport pickups to full-day chauffeur hire, we cover every journey with the same standard of excellence.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#9992;</div>
+          <h3>Airport Transfers</h3>
+          <p>Fixed-price transfers to and from Bratislava (BTS), Vienna Schwechat (VIE), and Budapest (BUD). Flight tracking included.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127961;</div>
+          <h3>City Rides</h3>
+          <p>On-demand luxury rides across Bratislava. Perfect for business meetings, dinners, or exploring the city in comfort.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128336;</div>
+          <h3>Hourly Chauffeur</h3>
+          <p>Book a dedicated driver by the hour. Ideal for corporate events, multi-stop errands, or a full day of sightseeing.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127758;</div>
+          <h3>Cross-Border Travel</h3>
+          <p>Comfortable long-distance transfers to Vienna, Budapest, Prague, and beyond. Door-to-door service across Central Europe.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127878;</div>
+          <h3>Events & Weddings</h3>
+          <p>Make your special occasion unforgettable with our premium fleet. Coordinated logistics for groups and VIPs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128188;</div>
+          <h3>Corporate Accounts</h3>
+          <p>Streamlined billing, priority booking, and dedicated account management for your business travel needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLEET -->
+  <section id="fleet" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Our Fleet</p>
+        <h2 class="section-title">Premium Vehicles</h2>
+        <p class="section-text">Every vehicle in our fleet is meticulously maintained, fully insured, and equipped for your comfort.</p>
+      </div>
+      <div class="fleet-grid">
+        <div class="fleet-card">
+          <div class="fleet-img">[ Mercedes E-Class Photo ]</div>
+          <div class="fleet-info">
+            <h3>Business Sedan</h3>
+            <p class="fleet-meta">Mercedes-Benz E-Class &middot; Up to 3 passengers</p>
+            <ul class="fleet-features">
+              <li>Leather Interior</li>
+              <li>Wi-Fi</li>
+              <li>Water</li>
+              <li>USB Charging</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-img">[ Mercedes S-Class Photo ]</div>
+          <div class="fleet-info">
+            <h3>First Class Sedan</h3>
+            <p class="fleet-meta">Mercedes-Benz S-Class &middot; Up to 3 passengers</p>
+            <ul class="fleet-features">
+              <li>Premium Leather</li>
+              <li>Wi-Fi</li>
+              <li>Refreshments</li>
+              <li>Privacy Glass</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-img">[ Mercedes V-Class Photo ]</div>
+          <div class="fleet-info">
+            <h3>Premium Van</h3>
+            <p class="fleet-meta">Mercedes-Benz V-Class &middot; Up to 6 passengers</p>
+            <ul class="fleet-features">
+              <li>Spacious Interior</li>
+              <li>Wi-Fi</li>
+              <li>Extra Luggage</li>
+              <li>USB Charging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Popular Routes</p>
+        <h2 class="section-title">Fixed-Price Transfers</h2>
+        <p class="section-text">No hidden fees, no surge pricing. The price you see is the price you pay.</p>
+      </div>
+      <table class="routes-table">
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Business Sedan</th>
+            <th>First Class</th>
+            <th>Premium Van</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bratislava City &rarr; BTS Airport</td>
+            <td class="price">&euro;25</td>
+            <td class="price">&euro;45</td>
+            <td class="price">&euro;55</td>
+          </tr>
+          <tr>
+            <td>Bratislava &rarr; Vienna Airport (VIE)</td>
+            <td class="price">&euro;75</td>
+            <td class="price">&euro;120</td>
+            <td class="price">&euro;140</td>
+          </tr>
+          <tr>
+            <td>Bratislava &rarr; Budapest Airport (BUD)</td>
+            <td class="price">&euro;180</td>
+            <td class="price">&euro;280</td>
+            <td class="price">&euro;320</td>
+          </tr>
+          <tr>
+            <td>Bratislava &rarr; Vienna City Center</td>
+            <td class="price">&euro;85</td>
+            <td class="price">&euro;130</td>
+            <td class="price">&euro;150</td>
+          </tr>
+          <tr>
+            <td>Bratislava &rarr; Prague</td>
+            <td class="price">&euro;290</td>
+            <td class="price">&euro;420</td>
+            <td class="price">&euro;480</td>
+          </tr>
+          <tr>
+            <td>Hourly Chauffeur (per hour)</td>
+            <td class="price">&euro;35</td>
+            <td class="price">&euro;55</td>
+            <td class="price">&euro;65</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ABOUT / WHY US -->
+  <section id="about" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Why Cersta</p>
+        <h2 class="section-title">The Difference Is in the Details</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-number">100%</div>
+          <h3>Fixed Pricing</h3>
+          <p>No surprises. Your fare is confirmed at booking, regardless of traffic or route changes.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-number">24/7</div>
+          <h3>Availability</h3>
+          <p>Early morning flights, late-night arrivals — we are here whenever you need us.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-number">15 min</div>
+          <h3>Response Time</h3>
+          <p>Your booking confirmed within minutes. Vehicle dispatched and tracking shared promptly.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-number">5&#9733;</div>
+          <h3>Service Standard</h3>
+          <p>Professional, discreet, and courteous chauffeurs. Every ride meets our premium standard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Book Your Ride</h2>
+        <p class="section-text">Reach out to us anytime. We'll get back to you within minutes.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <p><a href="tel:+421900000000">+421 900 000 000</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:info@cersta.com">info@cersta.com</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/421900000000">+421 900 000 000</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Hours</h3>
+            <p>Available 24/7 for bookings</p>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="tel" placeholder="Phone Number">
+          <textarea placeholder="Tell us about your trip..."></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 Cersta. All rights reserved. Premium transportation in Bratislava.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/421900000000" class="whatsapp-float" aria-label="Contact us on WhatsApp" target="_blank" rel="noopener">&#128172;</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
